@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mijnmethode(){
+            var deleeftijd = document.getElementById("invoerding").value;
+            var tussentext = "Hoi, jij bent "+deleeftijd + "jaren oud. ";
+            var janee
+            var antv = document.getElementById("antwoord");
+            console.log(typeof(deleeftijd));
+            if (deleeftijd<0){
+                antv.style.backgroundColor = "black"
+                antv.style.color = "red"
+                janee="Hee, even serieus!";
+                alert(tussentext+janee);
+            } else if (deleeftijd<16){
+                antv.style.backgroundColor = "red"
+                janee="Jij mag niks hebben, sorry";
+                alert(tussentext+janee);
+            } else if (deleeftijd<18){
+                antv.style.backgroundColor = "yellow"
+                janee="Jij mag alleen bier, sorry";
+                alert(tussentext+janee);
+            } else if (deleeftijd>=18){
+                antv.style.backgroundColor = "green"
+                janee="Jij mag alles hebben, maar wees voorzichtig";
+                alert(tussentext+janee);
+            } else {
+                antv.style.backgroundColor = "black"
+                antv.style.color = "red"
+                janee="Hee, vul een getal in!";
+                alert(tussentext+janee);
+            }
+            antv.innerHTML=tussentext+janee
+            tekenOpScherm(antv, "je mag wel alcohol", 'lightgreen')
+        }
+
+        function tekenOpScherm(elem, tekst, kleur){
+            elem.innerHTML = tekst;
+            elem.style.backgroundColor = kleur;
+        }
+
+    </script>
+</head>
+
+
+<body>
+    <h1> Mag jij alcohol drinken?  </h1>
+    <h2>Test het hier!</h2>
+    <p>Vul hier je leeftijd in:</p>
+    <input id="invoerding"><button onclick="mijnmethode()">Klik Hier</button>
+    <div id="antwoord">Hoi, test hier wat je mag drinken qua alcohol</div>
+
+</body>
+
+
+</html>

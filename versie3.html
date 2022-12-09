@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mijnmethode(){
+            var devoornaam = document.getElementById("invoerding").value;
+            console.log(devoornaam);
+            document.getElementById("uitkomst").innerHTML="welkom "+devoornaam;
+            if (devoornaam == "joost"){
+                document.getElementById("uitkomst").innerHTML="Hoi "+devoornaam;
+                for(let x=0;x<10;x++){
+                    console.log("test1");
+                }
+            } else{
+
+            }
+            for(let x=3;x<55;x+=7){
+                    console.log("test2"+x);
+                    document.getElementById("uitkomst").innerHTML += "<br>Meer text " + x;
+            }
+            document.getElementById("uitkomst").style.backgroundColor = "red";
+            alert(devoornaam+devoornaam);
+            var naargetal = parseInt(devoornaam);
+            alert(naargetal+naargetal);
+        }
+
+    </script>
+</head>
+
+
+<body>
+    <input id="invoerding"><button onclick="mijnmethode()">Klik Hier</button>
+    <div id="uitkomst">hoi</div>
+
+</body>
+
+
+</html>
